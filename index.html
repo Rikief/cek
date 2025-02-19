@@ -20,6 +20,14 @@
       alert("Klik kanan telah dinonaktifkan!");
     });
   </script>
+      <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
 </head>
 
 <body style="background-image: url('Bacground.png'); background-size: contain;">
@@ -139,6 +147,18 @@
 
 
     </div>
+      <script>
+    document.addEventListener("keydown", function(event) {
+      if (event.ctrlKey && (event.key === "u" || event.key === "U")) {
+        event.preventDefault();
+        alert("View Source dinonaktifkan!");
+      }
+      if (event.key === "F12") {
+        event.preventDefault();
+        alert("Developer Tools dinonaktifkan!");
+      }
+    });
+  </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
